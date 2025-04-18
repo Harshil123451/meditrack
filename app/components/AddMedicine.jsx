@@ -19,7 +19,7 @@ export default function AddMedicine() {
   const supabase = createClientComponentClient();
 
   useEffect(() => {
-    let controls: IScannerControls | null = null;
+    let controls = null;
 
     const startScanner = async () => {
       if (showScanner && videoRef.current) {
@@ -28,7 +28,7 @@ export default function AddMedicine() {
           controls = await codeReader.decodeFromVideoDevice(
             undefined,
             videoRef.current,
-            (result: Result, error) => {
+            (result, error) => {
               if (result) {
                 setMedicine((prev) => ({
                   ...prev,
