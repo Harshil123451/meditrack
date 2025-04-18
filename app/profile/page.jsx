@@ -47,7 +47,7 @@ export default function ProfilePage() {
         redirectTo: `${window.location.origin}/auth/callback?next=/profile`,
       });
       if (error) throw error;
-      toast.success('Password reset email sent');
+      toast.success('Password reset email sent. Please check your inbox.');
     } catch (error) {
       toast.error('Failed to send password reset email');
       console.error('Error sending password reset:', error);
