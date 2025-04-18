@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { toast } from 'react-hot-toast';
-import { Loader2, Pills, AlertTriangle, Heart } from 'lucide-react';
+import { Loader2, AlertTriangle, Heart, Pill } from 'lucide-react';
 import { format, isAfter, isBefore, differenceInDays } from 'date-fns';
 import { supabase } from '../utils/supabase';
 
@@ -68,7 +68,7 @@ export default function DashboardPage() {
     {
       title: 'Total Medicines',
       value: stats.total,
-      icon: Pills,
+      icon: Pill,
       color: 'text-primary',
       bgColor: 'bg-primary/10',
     },
